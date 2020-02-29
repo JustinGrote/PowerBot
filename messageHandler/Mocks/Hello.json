@@ -1,0 +1,29 @@
+---JSON---
+{
+  "channelData": {
+    "clientActivityID": "15829982051142u8i1se50w2",
+    "clientTimestamp": "2020-02-29T17:43:25.114Z"
+  },
+  "channelId": "emulator",
+  "conversation": {
+    "id": "990e4cf0-5b1a-11ea-80e7-6390fdc8b228|livechat"
+  },
+  "from": {
+    "id": "6b359f8d-1094-468b-8f43-85600222dc9c",
+    "name": "User",
+    "role": "user"
+  },
+  "id": "fc770fc0-5b1a-11ea-a39b-4da6ae448da2",
+  "localTimestamp": "2020-02-29T09:43:25-08:00",
+  "locale": "en-US",
+  "recipient": {
+    "id": "24abd0c0-5b07-11ea-80e7-6390fdc8b228",
+    "name": "Bot",
+    "role": "bot"
+  },
+  "serviceUrl": "http://localhost:30993",
+  "text": "hi",
+  "textFormat": "plain",
+  "timestamp": "2020-02-29T17:43:25.115Z",
+  "type": "message"
+}
