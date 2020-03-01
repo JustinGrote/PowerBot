@@ -1,13 +1,40 @@
-using namespace Microsoft.Bot.Schema
+using namespace System.Net
 using namespace NewtonSoft.Json
-# Input bindings are passed in via param block.
-param([string]$QueueItem, $TriggerMetadata)
+using namespace System.Threading
+using namespace System.Threading.Tasks
+using namespace Microsoft.Bot.Builder
+using namespace Microsoft.Bot.Schema
+
+param ([string]$QueueItem, $TriggerMetadata)
+
+if (test-path ../host.json) {Set-Location ..}
+Add-Type -Path ./PowerBot/lib/*.dll
+
+class PwshFunctionAdapter : BotAdapter {
+    PwshFunctionAdapter() {}
+
+    [Task] ProcessActivityAsync ([Activity]$activity) {
+        $context = [TurnContext]::New($this, $activity)
+        return $this.RunPipelineAsync($context, $null, [CancellationToken]::new()).ConfigureAwait($false)
+    }
+
+    [Task[resourceresponse[]]] SendActivitiesAsync ([ITurnContext]$context, [Activity[]]$activity, [CancellationToken]$cancellationToken) {
+        return $this
+    }
+
+    #Stub Methods to implement later
+    [Task[resourceresponse]] UpdateActivityAsync ([ITurnContext]$context, [Activity]$activity, [CancellationToken]$cancellationToken) {
+        throw [NotImplementedException]::new()
+    }
+    [Task] DeleteActivityAsync([ITurnContext]$context, [ConversationReference]$reference, [CancellationToken]$cancellationToken) {
+        throw [NotImplementedException]::new()
+    }
+}
 
 $ErrorActionPreference = 'Stop'
 
 #Move up a directory if we aren't in the function root. This is needed for Pester
 if (test-path ../host.json) {Set-Location ..}
-Add-Type -Path ./lib/*.dll
 
 $activity = [JsonConvert]::DeserializeObject(($QueueItem -replace '^---JSON---',''), [activity])
 

@@ -1,4 +1,6 @@
 {
+  "scriptFile": "../PowerBot/PowerBot.psm1",
+  "entryPoint": "messageHandler",
   "bindings": [
     {
       "name": "QueueItem",
