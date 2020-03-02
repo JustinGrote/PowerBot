@@ -21,7 +21,7 @@
     "name": "Bot",
     "role": "bot"
   },
-  "serviceUrl": "http://localhost:30993",
+  "serviceUrl": "http://localhost:4803",
   "text": "hi",
   "textFormat": "plain",
   "timestamp": "2020-02-29T17:43:25.115Z",

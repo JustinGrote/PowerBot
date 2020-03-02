@@ -9,15 +9,19 @@ using namespace Microsoft.Bot.Builder
 using namespace Microsoft.Bot.Schema
 
 class PwshBotAdapter : BotAdapter {
-    PwshBotAdapter() {}
+    PwshBotAdapter() {$this}
 
     [Task] ProcessActivityAsync ([Activity]$activity) {
+        write-host "ProcessActivityAsync $($activity.id)"
         $context = [TurnContext]::New($this, $activity)
-        return $this.RunPipelineAsync($context, $null, [CancellationToken]::new()).ConfigureAwait($false)
+        $cancel = [CancellationTokenSource]::new()
+        $runPipelineAsyncTask = $this.RunPipelineAsync($context, $null ,$cancel.Token)
+        return $runPipelineAsyncTask
     }
 
     [Task[microsoft.bot.schema.resourceresponse[]]] SendActivitiesAsync ([ITurnContext]$context, [Activity[]]$activity, [CancellationToken]$cancellationToken) {
-        return $this
+        write-host "Sending Activity $($activity.text)"
+        return [resourceresponse[]]@([ResourceResponse](($activity.id)))
     }
 
     #Stub Methods to implement later
