@@ -1,5 +1,17 @@
 {
   "version": "2.0",
+  "logging": {
+    "logLevel": {
+      "default": "Information",
+      "Function.messageHandler":"Trace"
+    }
+  },
+  "extensions": {
+    "queues": {
+      "maxPollingInterval": "00:00:00.100",
+      "maxDequeueCount": 1
+    }
+  },
   "extensionBundle": {
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
     "version": "[1.*, 2.0.0)"

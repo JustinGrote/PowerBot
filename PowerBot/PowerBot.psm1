@@ -16,6 +16,10 @@ function messageHandler ($QueueItem, $TriggerMetadata) { }
 
 $SCRIPT:client = $null
 
+$ErrorActionPreference = 'Stop'
+$DebugPreference = 'Continue'
+$VerbosePreference = 'Continue'
+
 $publicFunctions = [Collections.Generic.List[String]]@()
 foreach ($folderItem in 'Classes', 'Private', 'Public', 'AzureFunctions') {
     if (Test-Path $PSScriptRoot\$folderItem) {

@@ -1,0 +1,80 @@
+---JSON---
+{
+    "Type": "message",
+    "Id": "1583214114971",
+    "Timestamp": "2020-03-03T05:41:54.9810922+00:00",
+    "LocalTimestamp": "2020-03-02T21:41:54.9810922-08:00",
+    "LocalTimezone": null,
+    "ServiceUrl": "https://smba.trafficmanager.net/amer/",
+    "ChannelId": "msteams",
+    "From": {
+        "Id": "29:1yVxMeIWSXoj97exugU7XbRdpiHVwwsamR0LSviSpuZXNmxnOLBVnlZvOm-0Ye560ZvjQomkZAn8EXw830hfHHw",
+        "Name": "Grote, Justin",
+        "AadObjectId": "3a152b6a-8902-4447-a929-cb7bbe5acf11",
+        "Role": null,
+        "Properties": {}
+    },
+    "Conversation": {
+        "IsGroup": null,
+        "ConversationType": "personal",
+        "Id": "a:1b-dUBNnXMNc8Y0k9RfcLctuzArOSHDpYy2ox7nYz9WagTsUpKFckDDMIt_7wfxvSHfKcYm0XUKXs-xxgT-R18phF_HtkZxuPmQRFvbzFVVoddr3GYViKLbGT4P3eBZLq",
+        "Name": null,
+        "AadObjectId": null,
+        "Role": null,
+        "TenantId": "2f46c040-48e3-4eb8-8fbf-418417f64401",
+        "Properties": {}
+    },
+    "Recipient": {
+        "Id": "28:c28d55e3-fb0b-4367-b4a6-f00959a54e5b",
+        "Name": "jwgBot",
+        "AadObjectId": null,
+        "Role": null,
+        "Properties": {}
+    },
+    "TextFormat": "plain",
+    "AttachmentLayout": null,
+    "MembersAdded": null,
+    "MembersRemoved": null,
+    "ReactionsAdded": null,
+    "ReactionsRemoved": null,
+    "TopicName": null,
+    "HistoryDisclosed": null,
+    "Locale": "en-US",
+    "Text": "Maybe not...",
+    "Speak": null,
+    "InputHint": null,
+    "Summary": null,
+    "SuggestedActions": null,
+    "Attachments": null,
+    "Entities": [
+        {
+            "Type": "clientInfo",
+            "Properties": {
+                "locale": "en-US",
+                "country": "US",
+                "platform": "Web"
+            }
+        }
+    ],
+    "ChannelData": {
+        "tenant": {
+            "id": "2f46c040-48e3-4eb8-8fbf-418417f64401"
+        }
+    },
+    "Action": null,
+    "ReplyToId": null,
+    "Label": null,
+    "ValueType": null,
+    "Value": null,
+    "Name": null,
+    "RelatesTo": null,
+    "Code": null,
+    "Expiration": null,
+    "Importance": null,
+    "DeliveryMode": null,
+    "ListenFor": null,
+    "TextHighlights": null,
+    "SemanticAction": null,
+    "CallerId": null,
+    "Properties": {}
+}
